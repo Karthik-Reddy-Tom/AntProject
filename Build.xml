@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="ANTPROJECT5 - compile and run java class" default="run">
+   <target name="run" depends="compile">
+    <echo> Running Build </echo>
+   </target> 
+   <target name="Compile">
+    <echo> Compiling java classes </echo>
+     <javac srcdir="./src" destdir="staging" />
+   </target>
+  </Project>
