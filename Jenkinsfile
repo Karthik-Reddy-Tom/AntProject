@@ -3,7 +3,6 @@ pipeline {
 
     stages {
         stage ('Compile Stage') {
-
             steps {
                 withAnt(Ant : 'Ant 1_10_5') {
                     sh 'Ant compile'
@@ -12,7 +11,6 @@ pipeline {
         }
 
         stage ('Testing Stage') {
-
             steps {
                 withAnt(Ant : 'Ant 1_10_5') {
                     sh 'Ant dist'
