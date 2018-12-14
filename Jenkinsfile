@@ -5,7 +5,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(Ant : 'Ant 1_10_5') {
+                withAnt(Ant : 'Ant 1_10_5') {
                     sh 'Ant compile'
                 }
             }
@@ -14,7 +14,7 @@ pipeline {
         stage ('Testing Stage') {
 
             steps {
-                withMaven(Ant : 'Ant 1_10_5') {
+                withAnt(Ant : 'Ant 1_10_5') {
                     sh 'Ant dist'
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
 
         stage ('Deployment Stage') {
             steps {
-                withMaven(Ant : 'Ant 1_10_5') {
+                withAnt(Ant : 'Ant 1_10_5') {
                     sh 'Ant deploy'
                 }
             }
